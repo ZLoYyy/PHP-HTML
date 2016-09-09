@@ -9,7 +9,7 @@
         <div>
             <h1>Мой Первый Блог</h1>
             <div >
-                <?php foreach($aticles as $a): ?>
+                <?php foreach($articles as $a): ?>
                 <div class="article">
                     <h3>
                         <a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a>

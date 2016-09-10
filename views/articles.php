@@ -9,7 +9,7 @@
         <div>
             <h1>Мой Первый Блог</h1>
             <div >
-                <?php foreach($articles as $a): ?>
+                <?php foreach($articles as $a): ?>//создание цикла
                 <div class="article">
                     <h3>
                         <a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a>
@@ -17,7 +17,7 @@
                     <em>Опубдикованно: <?=$a['date']?></em>
                     <p><?=$a['content']?></p>
                 </div>
-                <?php endforeach ?>
+                <?php endforeach ?> //конец цикла
             </div>
             <footer>
                 <p> Мой Первый Блог<br>Copyright &copy; 2016</p>

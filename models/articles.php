@@ -11,7 +11,9 @@ function articles_ALL()
     return $arr;
 }
 function articles_GET()
-{}
+{
+    return["id" => 1, "title" => "Заголовок", "date" => "10-09-2016", "content" => "Скоро тут будет статья"];
+}
 function articles_NEW($title, $date, $content)
 {}
 function articles_EDIT($id, $title, $date, $content)

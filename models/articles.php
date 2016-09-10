@@ -21,8 +21,19 @@ function articles_ALL($link)
     return $articles;
     
 }
-function articles_GET()
+function articles_GET($link, $id_article)
 {
+    //Запрос
+    $query = sprintf("SELECT * FROM articles WHERE id=%d",(int)$id_article);
+    $result = mysqli_query($link, $query);
+    
+    if(!$result)
+        die(mysqli_error($link));
+    
+    $article = mysqli_fetch_assoc($result);
+    
+    return $article;
+    
     return["id" => 1, "title" => "Заголовок", "date" => "10-09-2016", "content" => "Скоро тут будет статья"];
 }
 function articles_NEW($title, $date, $content)

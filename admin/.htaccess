@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Admin Panel"
+AuthUserFile R:\Programs\xampp\htdocs\blog\PHP-HTML.git\admin\.htpasswd
+Require valid-user

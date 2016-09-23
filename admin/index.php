@@ -18,7 +18,7 @@ if($action == "add")
 {
     if(!empty($_POST))
         {
-            articles_NEW($link, $_POST['title'], $_post['date'], $_POST['content']);
+            articles_NEW($link, $_POST['title'], $_POST['date'], $_POST['content']);
             header("Location: index.php");
         }
     //Подключаем статью
@@ -39,6 +39,13 @@ else if($action == "edit")
         $article = articles_GET($link, $id);
         include("../views/articles_admin.php");
     }
+else if($action == "delete")
+    {
+        $id = $_GET['id'];
+        $article = articles_DELETE($link, $id);
+        header("Location: index.php");
+    }
+
 else
 {
     $articles = articles_ALL($link);

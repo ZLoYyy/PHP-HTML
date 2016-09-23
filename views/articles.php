@@ -16,7 +16,7 @@
                         <a href="article.php?id=<?=$a['id']?>"><?=$a['title']?></a>
                     </h3>
                     <em>Опубдикованно: <?=$a['date']?></em>
-                    <p><?=$a['content']?></p>
+                    <p><?=articles_intro($a['content'])?></p>
                 </div>
                 <?php endforeach ?>
             </div>

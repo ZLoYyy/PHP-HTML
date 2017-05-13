@@ -1,12 +1,12 @@
+/*class*/
+body {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 70px;
+}
 
 a {
     
-}
-
-a:hover, a:focus {
-    color: aquamarine;
-    text-decoration: none;
-    outline: 0;
 }
 
 th {
@@ -34,10 +34,50 @@ table {
 
 
 .blockBothom {
-    background: 100% dodgerblue;
+    background: 100% #0f599d;
 }
 
 .blockTop {
+    
+}
+
+.navbar-collapse {
+    margin-top: 170px;
+}
+
+.navbar-header {
+    margin-top: 190px;
+}
+
+.circle {
+    background: url(../image/circle.png);
+}
+
+.con {
+    position: relative;
+}
+
+.top2 {
+    position: absolute;
+    top: 33px;
+    left: 27px;
+}
+
+/*id*/
+
+#head a:hover, a:focus {
+    background-color: #d11e1b;
+    color: white;
+    text-decoration: none;
+    outline: 0;
+}
+
+#head a{
+    background-color: #0f599d;
+    color: white
+}
+
+#head li {
     
 }
 
@@ -47,26 +87,48 @@ table {
     position: relative
 }
 
+#header .row a {
+    background-color: #d11e1b;
+    color: white;
+}
+
 #blockOne {
     background: url(../image/layerOne.png) no-repeat center top;
-    min-height: 500px;
-    margin-top: -10px;
+    min-height: 600px;
     padding-top: 20px;
     background-attachment: relative;
     background-position: center center;
     background-size: 100%;
+    background-size: cover;
     width: 100%;
+}
+
+#blockOne h1 {
+    font-size: 25px;
+    color: #d11e1b;
+}
+
+#blockOne p {
+    font-size: 14.1px;
+}
+
+#blockOne a {
+/*
+    margin-left: -140px;
+    margin-top: 20px;
+*/
+    background-color: #d11e1b;
+    color: white
 }
 
 #blockTwo {
     background: url(../image/RangeImage.png) no-repeat center top;
-    min-height: 550px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    min-height: 850px;
     padding-top: 10px;
     background-attachment: relative;
     background-position: center center;
     background-size: 100%;
+    background-size: cover;
     width: 100%;
 }
 
@@ -74,18 +136,25 @@ table {
     padding: 10px;
 }
 
-.navbar-collapse {
-    padding-top: 330px;
-}
 
-.navbar-header {
-    margin-top: 190px;
-}
-
-.circle {
-    
-}
 
 #logo {
     background: url(../image/SmartObject.png);
+    background-size: cover;
+    min-height: 100px;
+    margin-top: -10px;
+}
+
+.line {
+    background: url(../image/line.png);
+     min-height: 20px;
+    background-size: 100%;
+    background-size: cover;
+    width: 100%;
+}
+
+#ss {
+    margin-top: 200px;
+    margin-left: -10px;
+    left: 10
 }

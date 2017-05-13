@@ -1,0 +1,91 @@
+
+a {
+    
+}
+
+a:hover, a:focus {
+    color: aquamarine;
+    text-decoration: none;
+    outline: 0;
+}
+
+th {
+    padding: 10px;
+}
+
+tr {
+    
+}
+
+input[type = "button"] {
+    background-color: blue
+}
+
+table {
+    margin: 10px;
+}
+.block {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #cc0000;
+    background: rgba(255, 234, 171, 0.5);
+    border: 2px #cccccc;
+}
+
+
+.blockBothom {
+    background: 100% dodgerblue;
+}
+
+.blockTop {
+    
+}
+
+#header {
+    width: 800px;
+    margin-top: -100px;
+    position: relative
+}
+
+#blockOne {
+    background: url(../image/layerOne.png) no-repeat center top;
+    min-height: 500px;
+    margin-top: -10px;
+    padding-top: 20px;
+    background-attachment: relative;
+    background-position: center center;
+    background-size: 100%;
+    width: 100%;
+}
+
+#blockTwo {
+    background: url(../image/RangeImage.png) no-repeat center top;
+    min-height: 550px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    background-attachment: relative;
+    background-position: center center;
+    background-size: 100%;
+    width: 100%;
+}
+
+#th {
+    padding: 10px;
+}
+
+.navbar-collapse {
+    padding-top: 330px;
+}
+
+.navbar-header {
+    margin-top: 190px;
+}
+
+.circle {
+    
+}
+
+#logo {
+    background: url(../image/SmartObject.png);
+}

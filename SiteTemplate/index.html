@@ -2,231 +2,623 @@
 <html>
     <head>
         <meta charset = "utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Спектр</title>
         <link rel = "stylesheet" href = "css/styleSheet.css">
         <link rel = "stylesheet" href = "css/font-awesome-4.7.0/css/font-awesome.css">
         <link rel = "stylesheet" href = "css/bootstrap-3.3.7-dist/css/bootstrap.css">
+        <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<!--        <link rel = "stylesheet" href = "css/bootstrap-3.3.7-dist/css/bootstrap.min.css">-->
     </head>
     <body>
-    <div class="line">
-    </div>
-    <div class="navbar">
-           <div class="container" id="header">
-               <div class="navbar-header">
-<!--
-                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    
-                   </button>
--->
-                   <div class="row">
-                       <div class="col-md-4">
-                           <img src="image/Logo.png" width="240px">
-                       </div>
-                       <div class="col-md-2">
-                           <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                       </div>
-                       <div class="col-md-2">
-                           <p>+7(4162) 53-10-36<br>+7(4162) 53-33-44</p>
-                       </div>
-                       <div class="col-md-2">
-                           <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
-                       </div>
-                       <div class="col-md-2"> 
-                           <p>Пн-Пт: c 8:00 до 18:00<br>Сб-Вс: с 8:00 до 14:00</p>
-                       </div>
-                       <div class="col-md-2"> 
-                            <ul class="nav navbar-nav navbar-center">
-                                <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
-                            </ul>
-                       </div>
-                   </div>
-                   <table>
-                       <tr>
-                           <th rowspan="2" id="th">
-                               <h1><img src="image/Logo.png"></h1>
-                           </th>
-                           <th rowspan="2" id="th">
-                               <h1><i class="fa fa-phone" aria-hidden="true"></i></h1>
-                           </th>
-                           <th>
-                                +7(4162) 53-10-36
-                           </th>
-                           <th rowspan="2" id="th">
-                                <h1><i class="fa fa-clock-o" aria-hidden="true"></i></h1>
-                           </th>
-                           <th>
-                                Пн-Пт: c 8:00 до 18:00
-                           </th>
-                           <th rowspan="2" id="th">
-                               <ul class="nav navbar-nav navbar-center">
-                                    <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
-                               </ul>
-                           </th>
-                       </tr>
-                            <th>
-                                +7(4162) 53-33-44
-                           </th>
-                            <th>
-                                Сб-Вс: с 8:00 до 14:00
-                           </th>
-                       <tr>
-                          
-                       </tr>
-                   </table>
-<!--                   <a class="navbar-brand" href="#"><img src="image/Logo.png"></a>-->
-<!--                   <i class="fa fa-phone" aria-hidden="true"></i>-->
-<!--                   <i class="fa fa-clock-o" aria-hidden="true"></i>-->
-               </div>
-               <div class="navbar-collapse" id="head">
-                   <ul class="nav navbar-nav navbar-center">
-                       <li class="active"><a href="#">О ЦЕНТРЕ</a></li>
-                       <li><a href="#">УСЛУГИ</a></li>
-                       <li><a href="#">СПЕЦИАЛИСТЫ</a></li>
-                       <li><a href="#">НОВОСТИ</a></li>
-                       <li><a href="#">КОНТАКТЫ</a></li>
-                       <li><a href="#">ПРАЙС</a></li>
-                       <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                   </ul>
-               </div>
-           </div>
-        </div> 
-
-        <div class = "table-responsive">
-           
-<!--
-                <div class = "block">
-                    <img src = "image/Logo.png"><br>
-                    <input type = "button" value="О ЦЕНТРЕ">
-                    <input type = "button" value="УСЛУГИ">
-                    <input type = "button" value="СПЕЦИАЛИСТЫ">
-                    <input type = "button" value="НОВОСТИ">
-                    <input type = "button" value="КОНТАКТЫ">
-                    <input type = "button" value="ПРАЙС">
-                    <input type = "button" value="O">
+        
+        <script>
+            $(function(){ 
+                $("[rel='popover']").popover({
+                    template: '<div class="popover" role="tooltip" style="max-width: 371px; border-radius: 0%"><div class="arrow"></div></h3><div class="popover-content"><div class="data-content"></div></div></div>',
+                    html: true,
+                    trigger: "hover"
+                });
+            });
+        </script>
+        
+        <div class="line">
+        </div>
+        
+        <div class="blockTop">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="row" id="header">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li class="col-md-4 col-xs-5 col-sm-5 col-lg-4" ><img src="image/Logo.png" width="340px"></li>
+                            <li style="padding-top: 45px; padding-left: 80px"  class="col-md-1 col-xs-1 col-sm-1 col-lg-1" id="red" ><i class="fa fa-phone fa-2x" aria-hidden="true"></i></li>
+                            <li style="padding-top: 40px; right: 10px" class="col-md-2 col-xs-5 col-sm-5 col-lg-2" id="red"><p>+7(4162) 53-10-36<br>+7(4162) 53-33-44</p></li>
+                            <li style="padding-top: 45px; padding-left: 30px" class="col-md-1 col-xs-5 col-sm-5 col-lg-1" id="blue"><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i></li>
+                            <li style="padding-top: 40px; right: 30px" class="col-md-2 col-xs-5 col-sm-5 col-lg-2"><p>Пн-Пт: c 8:00 до 18:00<br>Сб-Вс: с 8:00 до 14:00</p></li>
+                            <li style="padding-top: 35px; right: 30px" class="col-md-2 col-xs-2 col-sm-2 col-lg-2"><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                        </ul>
+                    </div>
                 </div>
--->
-                <div id = "blockOne">
-                    <div class="container">
-                        <div class="row centered ">
-                            <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6 col-lg-offset-2" id="ss">
-                                <h1><b>ПРИЕМ БЕЗ ТАЛОНОВ И ОЧЕРЕДЕЙ</b></h1><br>
-                                <p>МЫ ПРЕДЛАГАЕМ УСЛУГИ БОЛЕЕ 90 КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ ДЛЯ ЗАБОТЫ О ВАШЕМ ЗДОРОВЬЕ</p><br>
-                                
-                                <ul class="nav navbar-nav navbar-center">
-                                <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
-                            </ul>
+                
+                <div class="navbar-collapse" id="head">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li class="active"><a href="#">О ЦЕНТРЕ</a></li>
+                        <li><a href="#">УСЛУГИ</a></li>
+                        <li><a href="#">СПЕЦИАЛИСТЫ</a></li>
+                        <li><a href="#">НОВОСТИ</a></li>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                        <li><a href="#">ПРАЙС</a></li>
+                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="Carousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>   
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img style="margin-top:" src="image/layerOne.png" alt="Imagen 3" class="img-fluid">
+                            <div class="carousel-caption">
+                                <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6 col-lg-offset-2" id="ss">
+                                    <h1><b>ПРИЕМ БЕЗ ТАЛОНОВ И ОЧЕРЕДЕЙ</b></h1><br>
+                                    <p>МЫ ПРЕДЛАГАЕМ УСЛУГИ БОЛЕЕ 90 КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ ДЛЯ ЗАБОТЫ О ВАШЕМ ЗДОРОВЬЕ</p><br>
+
+                                    <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="item">
+                         <img style="margin-top:" src="image/layerOne.png" alt="Imagen 3" class="img-fluid">
+                            <div class="carousel-caption">
+                                <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6 col-lg-offset-2" id="ss">
+                                    <h1><b>ПРИЕМ БЕЗ ТАЛОНОВ И ОЧЕРЕДЕЙ</b></h1><br>
+                                    <p>МЫ ПРЕДЛАГАЕМ УСЛУГИ БОЛЕЕ 90 КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ ДЛЯ ЗАБОТЫ О ВАШЕМ ЗДОРОВЬЕ</p><br>
+
+                                    <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="item">
+                         <img style="margin-top:" src="image/layerOne.png" alt="Imagen 3" class="img-fluid">
+                            <div class="carousel-caption">
+                                <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6 col-lg-offset-2" id="ss">
+                                    <h1><b>ПРИЕМ БЕЗ ТАЛОНОВ И ОЧЕРЕДЕЙ</b></h1><br>
+                                    <p>МЫ ПРЕДЛАГАЕМ УСЛУГИ БОЛЕЕ 90 КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ ДЛЯ ЗАБОТЫ О ВАШЕМ ЗДОРОВЬЕ</p><br>
+
+                                    <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="item">
+                         <img style="margin-top:" src="image/layerOne.png" alt="Imagen 3" class="img-fluid">
+                            <div class="carousel-caption">
+                                <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6 col-lg-offset-2" id="ss">
+                                    <h1><b>ПРИЕМ БЕЗ ТАЛОНОВ И ОЧЕРЕДЕЙ</b></h1><br>
+                                    <p>МЫ ПРЕДЛАГАЕМ УСЛУГИ БОЛЕЕ 90 КВАЛИФИЦИРОВАННЫХ СПЕЦИАЛИСТОВ ДЛЯ ЗАБОТЫ О ВАШЕМ ЗДОРОВЬЕ</p><br>
+
+                                    <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+ 
+        </div>
+        </div>
+        
+        <div>
+            <div class="blockMid">
+                <div class="container">
+                    <div class="row centered">
+                        <br><br>
+                        <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                            <div class="blockBothomImg">
+                                <img src="image/SmartObject.png">
+                                <img src="image/circle.png" class="top2">
+                                <div class="example-text">
+                                    <img src="image/layer16.png">
+                                    <p><br>Инновационные методы лечения</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                            <div class="blockBothomImg">
+                                <img src="image/SmartObject.png">
+                                <img src="image/circle.png" class="top2">
+                                <div class="example-text">
+                                    <img src="image/layer15.png">
+                                    <p><br>Несем ответственность</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                            <div class="blockBothomImg">
+                                <img src="image/SmartObject.png">
+                                <img src="image/circle.png" class="top2">
+                                <div class="example-text">
+                                    <img src="image/layer17.png">
+                                    <p><br>Сохраняем цены демократичным</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                            <div class="blockBothomImg">
+                                <img src="image/SmartObject.png">
+                                <img src="image/circle.png" class="top2">
+                                <div class="example-text">
+                                    <img src="image/layer18.png">
+                                    <p><br>Лечим с комфортом</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <div class="blockBothom">
-            <div class="container">
-                <div class="row centered">
-                    <br><br>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                    <div class="con">
-                        <img src="image/SmartObject.png">
-                        <img src="image/circle.png" class="top2">
-                    </div>
-                        </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        <img src="image/SmartObject.png">
-                        <img src="image/circle.png" class="top2">
-                    </div>
-                    </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        <img src="image/SmartObject.png">
-                        <img src="image/circle.png" class="top2">
-                    </div>
-                    </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        <img src="image/SmartObject.png">
-                        <img src="image/circle.png" class="top2">
-                    </div>
-                    </div>
-                </div>
-            </div>
-                </div>
-<!--
-            <div class="blockBothom block">
-                <img src="image/SmartObject.png">
-                <img src="image/SmartObject.png">
-                <img src="image/SmartObject.png">
-                <img src="image/SmartObject.png">
-            </div>
--->
-                dawd
-            <div>
-            <div class="container">
-                
-                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
-                        <h3>АКЦИИ</h3>
-                        <ul class="nav nav-tabs nav-stacked">
-                       <li><a href="#">Составление персональной программы похудения бесплатно всем желающим!</a></li>
-                       <li class="active"><a href="#">Лиготным ктегориям пациентов скидка 10%</a></li>
-                       <li><a href="#">Скидка 20% на общее обследование</a></li>
-                       <li><a href="#">Составление персональной программы похудения бесплатно всем желающим!</a></li>
-                       <li><a href="#">СМОТРЕТЬ ВСЕ АКЦИИ >></a></li>
-                   </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9"></div>
-                </div>
-            </div>
-            
-        </div>
-        <div id="blockTwo">
-             <div class="container">
-                <div class="row centered">
-                    <br><br>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                    <div class="con">
-                        
-                    </div>
-                        </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        
-                    </div>
-                    </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        
-                    </div>
-                    </div>
-                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-                        <div class="con">
-                        
-                    </div>
-                    </div>
-                </div>
+                 </div>
             </div>
         </div>
+        
+        <div id="SharesBlock">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3" >
+                        <ul class="nav navbar-nav" id="midle">
+                            <li style="width:100%;"><h3><b>АКЦИИ</b></h3></li>
+                            <li><a href="#">Составление персональной программы похудения бесплатно всем желающим!</a></li>
+                            <li class="active"><a href="#">Лиготным ктегориям пациентов скидка 10%</a></li>
+                            <li style="width:100%;"><a href="#">Скидка 20% на общее обследование</a></li>
+                            <li><a href="#">Составление персональной программы похудения бесплатно всем желающим!</a></li>
+                            <li style="width:100%; margin-top: 12px; "><a href="#">СМОТРЕТЬ ВСЕ АКЦИИ »</a></li>
+                        </ul>
+                    </div>
+                    
+                     <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-5 col-sm-4 col-md-3 col-lg-6">
+                                            <a href="#" id="red" style="margin-left: 12px;">Специальное предложение</a>
+                                            <h2>Не упустите выгодное предложения</h2>
+                                        </div>
+                                        <div class="col-lg-" >
+                                            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                                                <a class="left carousel-control" href="#carousel-id" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/layer6.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        
+                                        <a href="#"><p  class="lineTop" id="red">Скидка 20% на общее обследование</p></a>
+                                        <br>
+                                        <p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/layer8.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        <a href="#"><p class="lineTop" id="red">Лиготным ктегориям пациентов скидка 10%</p></a>
+                                        <br>
+                                        <p>Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр».</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/layer6.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        <a href="#"><p class="lineTop" id="red">Скидка 20% на общее обследование</p></a>
+                                        <br>
+                                        <p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <div id="blockTwo">
+                <div class="container">
+                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-6" style="padding-left: 0;">
+                        <h2>Наши специалисты </h2>
+                    </div>
+                    <div class="col-lg-" >
+                        <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                            <a class="left carousel-control" href="#carousel-id" data-slide="prev" style="left: 1050px; background: #fcfcfc;">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel1" style="left: 1100px" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <div class="container">
+                        <div class="row centered">
+                            <br><br>
+                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                <div class="work">
+                                    <img src="image/doctorMan.png" style="width: 270px">
+                                    <h4 id="red">Иванов Иван</h4>
+                                    <p>рефлексотерапевт</p>
+                                    <p class="lineEmployee">Ведущий специалист Центра «Спектр»", автор собственной методики безоперационного лечения патологий опорно-двигательного аппарата.</p>
+                                    <div id="scd"><a href="#" >Узнать подробнее о специалисте »</a></div>
+                                    <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#" style="color: white;">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                <div class="work">
+                                    <img src="image/doctorWoman.png" style="width: 270px">
+                                    <h4 id="red">Иванова Алена</h4>
+                                    <p>рефлексотерапевт</p>
+                                    <p class="lineEmployee">Ведущий специалист Центра «Спектр»", автор собственной методики безоперационного лечения патологий опорно-двигательного аппарата.</p>
+                                    <div id="scd"><a href="#" >Узнать подробнее о специалисте »</a></div>
+                                     <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#" style="color: white;">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                <div class="work">
+                                    <img src="image/doctorMan.png" style="width: 270px">
+                                    <h4 id="red">Иванов Иван</h4>
+                                   <p>рефлексотерапевт</p>
+                                    <p class="lineEmployee">Ведущий специалист Центра «Спектр»", автор собственной методики безоперационного лечения патологий опорно-двигательного аппарата.</p>
+                                    <div id="scd"><a href="#" >Узнать подробнее о специалисте »</a></div>
+                                     <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#" style="color: white;">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                <div class="work">
+                                    <img src="image/doctorWoman.png" style="width: 270px">
+                                    <h4 id="red">Иванова Алена</h4>
+                                    <p>рефлексотерапевт</p>
+                                    <p class="lineEmployee">Ведущий специалист Центра «Спектр»", автор собственной методики безоперационного лечения патологий опорно-двигательного аппарата.</p>
+                                    <div id="scd"><a href="#" >Узнать подробнее о специалисте »</a></div>
+                                     <ul class="nav navbar-nav navbar-center">
+                                        <li><a href="#" style="color: white;">ЗАПИСАТЬСЯ НА ПРИЕМ</a></li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
         <div class="line">
         </div>
-
-        <div class = "blockBothom block">
+        
+        <div class="blockMidle">
             <div class="container">
-                <div class="row centered">
-                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
-                        <img src = "image/LogoCopy.png" width="300px">
-                        <p><i class="fa fa-home" aria-hidden="true"> г.Благовещенск, ул. 50 лет Октября, 24/1</i></p>
-                        <p><i class="fa fa-phone" aria-hidden="true"> +7(4162) 53-10-36<br>+7(4162) 53-33-44</i></p>
-                        <p><i class="fa fa-globe" aria-hidden="true">Лицензия ЛО 28-01-001331 от 01 июня 2016г.</i></p>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3"></div>
-                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3"></div>
+                <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-3 col-lg-12">
+                        <ul class="list-inline">
+                            <li id="BG"><h3>59 203</h3> КЛИЕНТОВ В ГОД</li>
+                            <li id="BG"><h3 style="padding-left: 0px;">35</h3> ЛЕТ РАБОТЫ</li>
+                            <li><h3 style="padding-left: 0px;">95</h3> СПЕЦИАЛИСТОВ</li>
+                        </ul>
+                    </div> 
                 </div>
             </div>
+        </div>
+        
+        <div class="blockComent">
+            <div class="container">
+                <h1>Что говорят наши клиенты</h1>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li rel="popover" data-placement="bottom" title="" data-content="<img src='image/,,.png'>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, "><p>Игорь Валерьевич,   <small>77 лет</small></p></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li rel="popover" data-placement="bottom" title="" data-content="<img src='image/,,.png'>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, "><p>Игорь Валерьевич,    <small>77 лет</small></p></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li rel="popover" data-placement="bottom" title="" data-content="<img src='image/,,.png'>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, "><p>Игорь Валерьевич,    <small>77 лет</small></p></li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav navbar-center" id="connemtBot">
+                        <li><a href="#">Оставить отзыв</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-7 col-sm-8 col-md-9 col-lg-9">
             
-            <table>
-            </table>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-5 col-sm-4 col-md-3 col-lg-6" >
+                                            
+                                            <h2 id="blue2">новости </h2>
+                                        </div>
+                                        <div class="col-lg-7" >
+                                            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                                                <a class="left carousel-control" href="#carousel-id" data-slide="prev" style="margin-top: -62px; margin-left: -17px">
+                                                    <span class="glyphicon glyphicon-chevron-left" style=""></span>
+                                                    <span class="sr-only">Anterior</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel1" role="button" data-slide="next" style="margin-top: -62px; margin-left: -17px">
+                                                    <span class="glyphicon glyphicon-chevron-right" ></span>
+                                                    <span class="sr-only">Siguiente</span>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/news1.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true" id="blue2"> </i> 12.01.2017
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        
+                                        <a href="#"><p class="lineTop">Мать-героиня родила тройню</p></a>
+                                        <br>
+                                        <p>Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр». технология способна заменить серьезное хирургическое вмешательство, неизменно </p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/news2.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true" id="blue2"> </i> 12.01.2017
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        <a href="#"><p class="lineTop" id="blue2">График работы в праздники</p></a>
+                                        <br>
+                                        <p>Зимние каникулы - отличная возможность проявить заботу о своем здоровье! Ждем вас! Предварительная запись уже открыта. График работы в праздничные дни в меди</p>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-3 col-lg-3">
+                                        <img src="image/news3.png" style="width: 240px">
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsLeft">
+                                            <i class="fa fa-calendar" aria-hidden="true" id="blue2"> </i> 12.01.2017
+                                        </div>
+                                        <div class="col-xs-12 col-sm-9 col-md-3 col-lg-6" id="iconsRight">
+                                            <a href="#"><i class="fa fa-twitter grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-whatsapp grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-facebook grey" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram grey" aria-hidden="true"></i></a>
+                                        </div>
+                                        <a href="#"><p class="lineTop">Приглашаем на занятия ЛФК с реабилитологом</p></a>
+                                        <br>
+                                        <p>«Спектр» приглашает на занятия ЛФК с квалифицированным врачом реабилитологом.  Лечебная физкультура с дозированной </p>
+                                    </div>
+                                </div>
+                            
+                    </div>
+                    
+                    <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
+                        <img src="image/planet.png">
+                        <div class="example">
+                            <h4>Будьте в курсе</h4><h5>последних событий</h5>
+                                    <br><br><br><a href="#">смотреть все новости »</a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div id="info">
+             <div class="container" >
+                        <h1 id="blue2">Об областном медицинском центре «Спектр»</h1>
+                        <p style="text-indent: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis </p><br><br>
+            </div>
+        </div>
+        
+        <div class="line">
+        </div>
+        
+        <div class="blockBothom block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="BotLeft">
+                        <div style="margin-bottom: 40px"><img src = "image/LogoCopy.png" width="300px"></div>
+                        
+                        <div class="ol-xs-1 col-sm-1 col-md-2 col-lg-1" style="padding-left:0; margin-top: -4px;"><i class="fa fa-home fa-1x" aria-hidden="true"> </i></div>
+                        <div><p>г.Благовещенск, ул. 50 лет Октября, 24/1</p></div><br>
+                        <div class="ol-xs-1 col-sm-1 col-md-2 col-lg-1" style="padding-left:0; margin-top: -4px;"><i class="fa fa-phone fa-1x" aria-hidden="true"> </i></div>
+                        <div><p>+7(4162) 53-10-36<br>+7(4162) 53-33-44</p></div><br>
+                        <div class="ol-xs-1 col-sm-1 col-md-2 col-lg-1" style="padding-left:0; margin-top: -4px;"><i class="fa fa-globe fa-21x" aria-hidden="true"></i></div>
+                        <div><p>Лицензия ЛО 28-01-001331 от 01 июня 2016г.</p></div>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <p>Мы принимаем</p>
+                        <p class="lineBottom"></p><br><br>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-3" style="margin-left: -20px">
+                                <a href="#"><img src="image/MasterCard.png"></a>
+                            </div>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-3">
+                                <a href="#"><img src="image/Visa.png"></a>
+                            </div>
+                        <p><br><br><br><br>Мы в социальных сетях</p>
+                        <p class="lineBottom"></p>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="background-color: #009dce;" id="soc">
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #f0f1f1; margin-left: -8px; margin-top: 5px; font-size: 35px"></i></a>
+                            </div>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="background-color: #25bf37;" id="soc">
+                                <a href="#"><i class="fa fa-whatsapp" aria-hidden="true" style="color: #f0f1f1; margin-left: -8px; margin-top: 5px; font-size: 35px"></i></a>
+                            </div>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="background-color: #103d6f;" id="soc">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #f0f1f1; margin-top: 5px; font-size: 35px"></i></a>
+                            </div>
+                            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1" style="background-color: #f36609;" id="soc">
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #f0f1f1; margin-left: -8px; margin-top: 5px; font-size: 35px"></i></a>
+                            </div>
+                    </div>
+                    
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <p>Основные разделы</p>
+                        <p class="lineBottom"></p>
+                        <ul>
+                            <li><a href="#">О центре</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#" class="active">Специалисты</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Акции</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                    <div class="row">
+                        <div style="left: -15px" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            &copy;   Областной медицинский центр «Спектр», 2017
+                        </div>
+                        
+                        <div style="text-align: right;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            Создание сайта SP-artgroup
+                        </div>
+                    </div>
+            </div>
         </div>
     </body>
 </html>
+
+
+
+
+<!--
+
+<div>
+            <div class="col-md-5">
+-->
+                    <!-- aqui insertaremos el slider -->
+<!--                <div id="carousel-id" class="carousel slide" data-ride="carousel">-->
+                  <!-- Indicatodores -->
+<!--
+                  <ol class="carousel-indicators">
+                     <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                     <li data-target="#carousel-id" data-slide-to="1"></li>
+                     <li data-target="#carousel-id" data-slide-to="2"></li>
+                     <li data-target="#carousel" data-slide-to="3"></li>
+                  </ol>
+-->
+
+                  <!-- Contenedor de las imagenes -->
+<!--
+                  <div class="carousel-inner">
+
+                    <div class="item active">
+                      <img src="image/layerOne.png">
+                      <div class="carousel-caption"> Mi imagen 1 </div>
+                    </div>
+
+                    <div class="item">
+                      <img src="" alt="Imagen 2">
+                      <div class="carousel-caption"> Mi imagen 2 </div>
+                    </div>
+
+                    <div class="item">
+                      <img src="" alt="Imagen 3">
+                      <div class="carousel-caption"> Mi imagen 3 </div>
+                    </div>
+                      
+                      <div class="item active">
+                      <img src="" alt="Imagen 1">
+                      <div class="carousel-caption"> Mi imagen 1 </div>
+                    </div>
+                      
+                  </div>
+-->
+
+                  <!-- Controls -->
+<!--
+                  <a class="left carousel-control" href="#carousel-id" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel1" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Siguiente</span>
+                  </a>
+
+                </div>
+            </div>
+        </div>-->

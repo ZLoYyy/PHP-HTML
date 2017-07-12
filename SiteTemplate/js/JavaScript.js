@@ -1,22 +1,41 @@
-$('.slide').click(function() {
-//        navBtnId = $(this).index();
-	alert('sf');
+(function($) {
+    $(function() {
+        var jcarousel = $('.jcarousel');
 
-//        if (navBtnId + 1 != slideNow) {
-//            translateWidth = -$('#viewport').width() * (navBtnId);
-//            $('#slidewrapper').css({
-//                'transform': 'translate(' + translateWidth + 'px, 0)',
-//                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-//                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-//            });
-//            slideNow = navBtnId + 1;
-//        }
+        jcarousel
+            .on('jcarousel:reload jcarousel:create', function () {
+                var carousel = $(this),
+                    width = carousel.innerWidth();
+				var theId = carousel.attr('id');
+
+                if (theId == 'Specialistics') {
+                    width = width / 4;
+                } else {
+                    width = width / 3;
+                }
+
+                carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+            })
+            .jcarousel({
+                wrap: 'circular'
+            });
+
+        $('.jcarousel-control-prev')
+            .jcarouselControl({
+                target: '-=1'
+            });
+
+        $('.jcarousel-control-next')
+            .jcarouselControl({
+                target: '+=1'
+            });
     });
-/////
+})(jQuery);
+
+
 $(function(){
     $('#addComment').click(function () {
-    	$('#commentForm').show();
-		$('#addComment').hide();
+    	$('.commentForm').arcticmodal();
     });
 });
 
@@ -28,6 +47,7 @@ $(function(){
 });
 
 $(document).ready(function() {
+	$.noConflict;
 	var boolName = false;
 	var boolEmail = false;
 	var boolCheck = false;
@@ -96,14 +116,10 @@ $(document).ready(function() {
 		},
 		
 		'commentName' : function() {
-			$('.viewFormComment').append('<div id="comentName" class="info"></div>');
-			var comentName = $('#comentName');
+			$('.commentForm').append('<div id="comName" class="info"></div>');
+			var comentName = $('#comName');
             var element = $('#commentName');
             var pos = element.offset();
-			comentName.css({
-                top: pos.top-2,
-                left: pos.left+element.width()+35
-            });
 			
 			if(element.val().length < 3) {
 				notificationFalse(comentName, element, '← Минимум 3 символа');
@@ -114,15 +130,11 @@ $(document).ready(function() {
 		},
 		
 		'commentDate' : function() {
-			$('.viewFormComment').append('<div id="birthDay" class="info"></div>');
+			$('.commentForm').append('<div id="birthDay" class="info"></div>');
             var birthDay = $('#birthDay');
             var element = $('#commentDate');
             var pos = element.offset();
 			var regular = /([0-2]\d|3[01])\.(0\d|1[012])\.(\d{4})/;
-			birthDay.css({
-                top: pos.top-2,
-                left: pos.left+element.width()+35
-            });
 			
             if(!regular.test(element.val())) {
                 notificationFalse(birthDay, element, 'Введите корректную дату');
@@ -133,12 +145,13 @@ $(document).ready(function() {
 			
 		},
 		
-		'sendIt' : function (){
+		'acceptanceSend' : function (){
              if(!boolName || !boolEmail || !boolCheck || !boolTelephone) {
 				  alert("Заполните все поля");
              } else {
-				 $('#formAppointment').submit();
+//				 $('#formAppointment').submit();
 				 alert("Запрос отправлен");
+				 window.location.reload();
 			 }
          },
 		
@@ -146,10 +159,6 @@ $(document).ready(function() {
              if(!boolbirthDay || !boolCommentName) {
 				  alert("Заполните все поля");
              } else {
-				 $('#birthInfo').hide();
-				 $('#commentForm').submit();
-				 $('#commentForm').hide();
-    			 $('#addComment').show();
 				 alert("Спасибо! Ваш коментарий отправлен на модерацию");
 				 window.location.reload();
 			 }
@@ -157,19 +166,20 @@ $(document).ready(function() {
 	
 	};
 	
-	$('#send').click(function (){
-         validate.formName();
-         validate.formEmail();
-         validate.formCheckbox();
-		 validate.sendIt();
-              
-         return false;
-     });
+	
 	
 	$('#commentSend').click(function (){
          validate.commentName();
          validate.commentDate();
          validate.comSend();
+         return false;
+     });
+	
+	$('#acceptanceSend').click(function (){
+         validate.formName();
+         validate.formEmail();
+         validate.formCheckbox();
+		 validate.acceptanceSend();
          return false;
      });
 	

@@ -8,17 +8,22 @@
         <title>Спектр</title>
         
         <link rel = "stylesheet" href = "css/styleSheet.css">
+<!--		<link rel = "stylesheet" href = "css/jcarousel.responsive.css">-->
         <link rel = "stylesheet" href = "css/font-awesome-4.7.0/css/font-awesome.css">
 		<link rel = "stylesheet" href="css/jquery.arcticmodal-0.3.css">
         <link rel = "stylesheet" href = "css/bootstrap-3.3.7-dist/css/bootstrap.css">
         
         
        
+		
+		
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
-        <script src="js/jquery.jcarousel.js" type="text/javascript"></script>
+		<script src="js/jquery.jcarousel.min.js" type="text/javascript"></script>
+		<script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="js/jquery.arcticmodal-0.3.min.js" type="text/javascript"></script>
 		<script src="js/jquery.maskedinput.js" type="text/javascript"></script>
-        <script src="css/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/jquery.mousewheel.min.js" type="text/javascript"></script>
+		
 		<script src="js/JavaScript.js" type="text/javascript"></script>
     </head>
     <body>
@@ -40,7 +45,7 @@
 
 				<label for="formCheckbox">Я ознакомился с утверждением о конфиденциальности</label><br>
 				<input type="checkbox" id="formCheckbox" name="formCheckbox"><br>
-				<button type="submit" id="send">Отправить заявку</button>
+				<button type="submit" class="sendButton" id="acceptanceSend">Отправить заявку</button>
 			</form>
 		</div>
 		</div>
@@ -190,60 +195,87 @@
                             <h2>Не упустите выгодное предложения</h2>
                         </div>
                         <div class="LR" >
-                            <a href="#"><img src="image/left.png"></a>
-                            <a href="#"><img src="image/right.png"></a>
+                            <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true"><img src="image/left.png"></a>
+                            <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true"><img src="image/right.png"></a>
                         </div>
                                     
                                 
                         <div class="clearfix"></div>
-                        <div class="miniBlockOne">
-                            <img src="image/layer6.png" class="">
-                            <div class="iconsLeft">
-                                <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
-                            </div>
-                            <div class="rightIcon">
-                                <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                                            
-                            </div>
-                            <div class="clearfix"></div>
-                            
-                            <a href="#"><p  class="lineProperties red">Скидка 20% на общее обследование</p></a>
-                            <p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
-                        </div>
-                        <div class="miniBlockTwo">
-                            <img src="image/layer8.png" class="g">
-                                <div class="iconsLeft">
-                                    <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
-                                </div>
-                                <div class="rightIcon">
-                                            <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="clearfix"></div>
-                                        <a href="#"><p class="lineProperties red">Лиготным ктегориям пациентов скидка 10%</p></a>
-                                        <p>Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр».</p>
-                        </div>
-                        <div class="miniBlockTree">
-                            <img src="image/layer6.png" class="mg">
-                                <div class="iconsLeft">
-                                            <i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
-                                </div>
-                                <div class="rightIcon">
-                                            <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                                            <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="clearfix"></div>
-                                        <a href="#"><p class="lineProperties red">Скидка 20% на общее обследование</p></a>
-                                        <p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
-                        </div>
-                                
+						
+						<div class="jcarousel" data-jcarousel="true">
+							<ul>
+								<li>
+									<div class="miniBlockOne">
+										<img src="image/layer6.png" class="">
+										<div class="iconsLeft">
+											<i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+										</div>
+										<div class="rightIcon">
+											<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+
+										</div>
+										<div class="clearfix"></div>
+
+										<a href="#"><p  class="lineProperties red">Скидка 20% на общее обследование</p></a>
+										<p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
+									</div>
+								</li>
+								<li>
+									<div class="miniBlockTwo">
+										<img src="image/layer8.png" class="g">
+										<div class="iconsLeft">
+											<i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+										</div>
+										<div class="rightIcon">
+											<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+										</div>
+										<div class="clearfix"></div>
+											<a href="#"><p class="lineProperties red">Лиготным ктегориям пациентов скидка 10%</p></a>
+											<p>Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр».</p>
+									</div>
+								</li>
+								<li>
+									<div class="miniBlockTree">
+										<img src="image/layer6.png" class="mg">
+										<div class="iconsLeft">
+											<i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+										</div>
+										<div class="rightIcon">
+											<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+										</div>
+										<div class="clearfix"></div>
+											<a href="#"><p class="lineProperties red">Скидка 20% на общее обследование</p></a>
+											<p>Роботы бережно возвращают смещенные позвонки на место и грыжа самостоятельно</p>
+									</div>
+								</li>
+								<li>
+									<div class="miniBlockTwo">
+										<img src="image/layer8.png" class="g">
+										<div class="iconsLeft">
+											<i class="fa fa-calendar" aria-hidden="true"> 12.01.2017</i>
+										</div>
+										<div class="rightIcon">
+											<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+											<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+										</div>
+										<div class="clearfix"></div>
+											<a href="#"><p class="lineProperties red">Лиготным ктегориям пациентов скидка 10%</p></a>
+											<p>Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр».</p>
+									</div>
+								</li>
+							</ul>
+						</div>     
                     </div>
                     
             </div>
@@ -257,13 +289,15 @@
                 
 
                     <div class="LR" >
-                        <a href="#"><img src="image/L.png"></a>
-                        <a href="#"><img src="image/R.png"></a>
+                        <a href="#" class="jcarousel-control-prev"><img src="image/L.png"></a>
+                        <a href="#" class="jcarousel-control-next"><img src="image/R.png"></a>
                     </div>
          
                 <div class="clearfix"></div>
-                
-                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+				<div class="jcarousel" id="Specialistics">
+					<ul>
+						<li>
+							<div class="">
                                  <div class="work">
                                     <img src="image/doctorMan.png">
                                     <p><span class="red">Иванов Иван</span></p>
@@ -277,7 +311,9 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 ">
+						</li>
+						<li>
+							<div class="">
                                 <div class="work">
                                     <img src="image/doctorWoman.png">
                                     <p><span class="red">Иванова Алена</span></p>
@@ -290,7 +326,9 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+						</li>
+						<li>
+							<div class="">
                                  <div class="work">
                                     <img src="image/doctorMan.png">
                                      <p><span class="red">Иванов Иван</span></p>
@@ -304,7 +342,9 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+						</li>
+						<li>
+							<div class="">
                                  <div class="work">
                                     <img src="image/doctorWoman.png">
                                     <p><span class="red">Иванова Алена</span></p>
@@ -320,8 +360,26 @@
                                 </div>  
                                 
                             </div>
-                        
-                    </div>
+						</li>
+						<li>
+							<div class="">
+                                 <div class="work">
+                                    <img src="image/doctorMan.png">
+                                    <p><span class="red">Иванов Иван</span></p>
+                                    <p>рефлексотерапевт</p>
+                                     <div  class="lineEmployee">
+                                         <p>Ведущий специалист Центра «Спектр»", автор собственной методики безоперационного лечения патологий опорно-двигательного аппарата.</p>
+                                         <div class="SpecialistsInfo"><a href="#" >Узнать подробнее о специалисте »</a></div>
+                                             <a href="#" onclick="return false" class="bt appointment">ЗАПИСАТЬСЯ НА ПРИЕМ</a>
+                                            
+                                     </div>
+                                    
+                                </div>
+                            </div>
+						</li>
+					</ul>
+				</div>
+             </div>
         </div>
         
          <div class="blockStatistic">
@@ -333,54 +391,81 @@
         </div>
         
         <div class="comment">
+			<div class="LR" >
+                            <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true"></a>
+                            <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true"></a>
+                </div>
             <div class="container">
                 <h1>Что говорят наши клиенты</h1>
-                
-                <div class="col-md-4 col-lg-4 commentBlock cTop">
+				
+				
+				<div class="jcarousel" id="cm">
+					<ul>
+						<li>
+							<div class="col-md-4 col-lg-4 commentBlock cTop">
                     
-                    <div class=" commentTop" ><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
-                    <div class="commentBot">
-                            <p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-lg-4 commentBlock cTop">
+								<div class=" commentTop" ><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
+								<div class="commentBot">
+										<p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="col-md-4 col-lg-4 commentBlock cTop">
                     
-                    <div class="commentTop"><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
-                    <div class="commentBot">
-                        <p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-lg-4 commentBlock">
+								<div class="commentTop"><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
+								<div class="commentBot">
+									<p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
+								</div>
+							</div>
+						</li>
+						
+						<li>
+							<div class="col-md-4 col-lg-4 commentBlock">
                     
-                    <div class="commentTop"><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
-                    <div class="commentBot">
-                            <p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
-                    </div>
-                </div>
+								<div class="commentTop"><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
+								<div class="commentBot">
+										<p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="col-md-4 col-lg-4 commentBlock cTop">
+                    
+								<div class=" commentTop" ><p>Игорь Валерьевич,   <small>77 лет</small></p></div>
+								<div class="commentBot">
+										<p><img src="image/,,.png" class="comImg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, euismod a lacus et, mattis condimentum augue. Vivamus fermentum ex quis imperdiet sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum massa vel enim feugiat gravida. Phasellus velit risus, </p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
 				
 <!--		form2		-->
-				
-				<div class="viewFormComment">
-                <form name="commentForm" action="#" method="post" id="commentForm" onsubmit="return false">
-                    <label for="commentName">Ваше имя:</label>
-					<input type="text" class="123" name="commentName" placeholder="Имя" id="commentName"><br>
-					
-					<label for="commentDate">Дата рождения:</label>
-					<input type="text" name="commentDate" placeholder="dd.mm.yyyy" id="commentDate"><br>
-					
-					<label for="comment">Сообщение:</label>
-					<textarea id="textarea" name="comment" cols="30" rows="5"></textarea><br>
-                    
-					<button type="submit" id="commentSend">Отправить</button>
-                </form>
+				<div class="formShadow">
+					<div class="commentForm">
+						<form name="cForm" action="#" method="post" id="cForm" onsubmit="return false">
+							<legend>Ваш отзыв</legend>
+							<label for="commentName">Ваше имя:</label><br>
+							<input type="text" class="123" name="commentName" placeholder="Имя" id="commentName"><br>
+
+							<label for="commentDate">Дата рождения:</label><br>
+							<input type="text" name="commentDate" placeholder="dd.mm.yyyy" id="commentDate"><br>
+
+							<label for="comment">Сообщение:</label><br>
+							<textarea id="textarea" name="comment" cols="30" rows="5"></textarea><br>
+
+							<button type="submit" class="sendButton" id="commentSend">Отправить</button>
+						</form>
 					</div>
+				</div>
 				
                 <div class="col-md-4 col-lg-12" id="commentButtomt">
                     <a href="#" onclick="return false" id="addComment">Оставить отзыв</a>
                 </div>
-            </div>
+            
+			</div>
             
         </div>
 
@@ -391,64 +476,93 @@
                         <h2 class="blue">новости </h2>
                     </div>
                     <div class="LR" >
-                        <a href="#"><img src="image/left.png"></a>
-                        <a href="#"><img src="image/right.png"</a>
+                        <a href="#" class="jcarousel-control-prev" data-jcarouselcontrol="true"><img src="image/left.png"></a>
+                        <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true"><img src="image/right.png"></a>
                     </div>
                                 
                     <div class="clearfix"></div>
-                    
-                    <div class="miniBlockOne">
-                        <img src="image/news1.png" class="">
-                        <div class="iconsLeft">
-                            <i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
-                        </div>
-                        <div class="rightIcon">
-                            <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="lineNews">
-                            <a href="#"><p class="lineTop">Мать-героиня родила тройню</p></a>
-                            <p class="clip">Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр». технология способна заменить серьезное хирургическое вмешательство, неизменно </p>
-                        </div>
-                        
-                    </div>
-                    <div class="miniBlockTwo">
-                        <img src="image/news2.png" class="">
-                        <div class="iconsLeft">
-                            <i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
-                        </div>
-                        <div class="rightIcon">
-                            <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="lineNews">
-                            <a href="#"><p class="lineTop blue">График работы в праздники</p></a>
-                            <p>Зимние каникулы - отличная возможность проявить заботу о своем здоровье! Ждем вас! Предварительная запись уже открыта. График работы в праздничные дни в меди</p>
-                        </div>
-                    </div>
-                    <div class="miniBlockTree">
-                        <img src="image/news3.png" class="  ">
-                        <div class="iconsLeft">
-                            <i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
-                        </div>
-                        <div class="rightIcon">
-                            <a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="lineNews">
-                            <a href="#"><p class="lineTop">Приглашаем на занятия ЛФК с реабилитологом</p></a>
-                            <p>«Спектр» приглашает на занятия ЛФК с квалифицированным врачом реабилитологом.  Лечебная физкультура с дозированной </p>
-                        </div>
-                    </div>
+						
+					<div class="jcarousel" data-jcarousel="true">
+						<ul>
+							<li>
+								<div class="miniBlockOne">
+									<img src="image/news1.png" class="">
+									<div class="iconsLeft">
+										<i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
+									</div>
+									<div class="rightIcon">
+										<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="lineNews">
+										<a href="#"><p class="lineTop">Мать-героиня родила тройню</p></a>
+										<p class="clip">Для пенсионеров предусмотрена 10% скидка на медицинские услуги в Центре «Спектр». технология способна заменить серьезное хирургическое вмешательство, неизменно </p>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<div class="miniBlockTwo">
+									<img src="image/news2.png" class="">
+									<div class="iconsLeft">
+										<i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
+									</div>
+									<div class="rightIcon">
+										<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="lineNews">
+										<a href="#"><p class="lineTop blue">График работы в праздники</p></a>
+										<p>Зимние каникулы - отличная возможность проявить заботу о своем здоровье! Ждем вас! Предварительная запись уже открыта. График работы в праздничные дни в меди</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="miniBlockTree">
+									<img src="image/news3.png" class="  ">
+									<div class="iconsLeft">
+										<i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
+									</div>
+									<div class="rightIcon">
+										<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="lineNews">
+										<a href="#"><p class="lineTop">Приглашаем на занятия ЛФК с реабилитологом</p></a>
+										<p>«Спектр» приглашает на занятия ЛФК с квалифицированным врачом реабилитологом.  Лечебная физкультура с дозированной </p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="miniBlockTwo">
+									<img src="image/news2.png" class="">
+									<div class="iconsLeft">
+										<i class="fa fa-calendar blue" aria-hidden="true"> </i> 12.01.2017
+									</div>
+									<div class="rightIcon">
+										<a href="#"><i class="fa fa-twitter grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-whatsapp grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-facebook grey iconsRight" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-instagram grey iconsRight" aria-hidden="true"></i></a>
+									</div>
+									<div class="clearfix"></div>
+									<div class="lineNews">
+										<a href="#"><p class="lineTop blue">График работы в праздники</p></a>
+										<p>Зимние каникулы - отличная возможность проявить заботу о своем здоровье! Ждем вас! Предварительная запись уже открыта. График работы в праздничные дни в меди</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+				</div>
             </div>
                     
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 bg-news">
